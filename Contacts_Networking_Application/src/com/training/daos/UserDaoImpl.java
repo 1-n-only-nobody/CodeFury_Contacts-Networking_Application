@@ -3,18 +3,32 @@
  */
 package com.training.daos;
 
+import java.sql.Connection;
 import java.util.Collection;
 
 import com.training.entity.Contact;
 import com.training.entity.Person;
 import com.training.entity.User;
 import com.training.ifaces.UserDao;
+import com.training.utils.ConnectionUtility;
 
 /**
  * @author manan
  *
  */
 public class UserDaoImpl implements UserDao {
+
+	Connection derbyConnection = null;
+	
+	
+	/**
+	 * 
+	 */
+	public UserDaoImpl() {
+		super();
+		
+		this.derbyConnection = ConnectionUtility.getDerbyConnection();
+	}
 
 	@Override
 	public boolean addContact(Person user, Contact contact) {
