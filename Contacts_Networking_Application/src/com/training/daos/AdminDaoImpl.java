@@ -3,6 +3,8 @@
  */
 package com.training.daos;
 
+import java.util.Collection;
+
 import com.training.entity.Person;
 import com.training.ifaces.AdminDao;
 
@@ -25,9 +27,22 @@ public class AdminDaoImpl implements AdminDao {
 	}
 
 	@Override
-	public void showSummary() {
+	public Collection<?> showSummary() {
+		return null;
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public boolean loginAdmin(String adminUsername, String adminPassword) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean logoutAdmin() {
+		// TODO Auto-generated method stub
+		return false;
 	}
 	
 }
